@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.second_lab"
+    namespace = "com.example.kotlin_example_application"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.second_lab"
+        applicationId = "com.example.kotlin_example_application"
         minSdk = 25
         targetSdk = 36
         versionCode = 1
