@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
 @Composable
-fun ProductScreen(navControlller: NavController) {
+fun ProductScreen(navControlller: NavController,  productId: String) {
 
     Column(
         modifier = Modifier.fillMaxSize().padding(16.dp),

@@ -1,7 +1,6 @@
 package com.example.kotlin_example_application.ui.components
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.ShoppingCart
@@ -30,9 +29,8 @@ sealed class Screen(
         icon = Icons.Default.Person
     )
 
-    data object Product : Screen(
-        route = "product",
-        title = "Продукт",
-        icon = Icons.Default.Add
-    )
+    data object Product: Screen("product") {
+        const val ARG_PRODUCT_ID = "productId"
+        fun routeWithArgs(productId: String) = "$route/$productId"
+    }
 }
