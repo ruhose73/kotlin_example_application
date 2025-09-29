@@ -13,7 +13,9 @@ import androidx.navigation.NavController
 @Composable
 fun CartScreen(navControlller: NavController) {
     Column(
-        modifier = Modifier.fillMaxSize().padding(16.dp),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         Text("Корзина")

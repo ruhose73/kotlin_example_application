@@ -28,8 +28,7 @@ fun AppNavGraph(navController: NavHostController) {
         bottomBar = {
             BottomNavBar(navController)
         }
-    ) {
-            innerPadding ->
+    ) { innerPadding ->
         NavHost(
             navController = navController,
             startDestination = Screen.Home.route,
@@ -38,10 +37,9 @@ fun AppNavGraph(navController: NavHostController) {
             composable(Screen.Home.route) { HomeScreen(navController) }
             composable(Screen.Cart.route) { CartScreen(navController) }
             composable(Screen.Profile.route) { ProfileScreen(navController) }
-            composable  (
+            composable(
                 route = "${Screen.Product.route}/{productId}"
-            ) {
-                    backStackEntity ->
+            ) { backStackEntity ->
                 val productId = backStackEntity.arguments?.getString("productId") ?: ""
                 ProductScreen(navController, productId)
             }

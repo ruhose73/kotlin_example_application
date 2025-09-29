@@ -20,7 +20,7 @@ fun BottomNavBar(navController: NavController) {
             NavigationBarItem(
                 selected = currentRoute == screen.route,
                 onClick = {
-                    if(currentRoute != screen.route) {
+                    if (currentRoute != screen.route) {
                         navController.navigate(screen.route) {
                             popUpTo(navController.graph.startDestinationId) {
                                 inclusive = false
@@ -34,7 +34,7 @@ fun BottomNavBar(navController: NavController) {
                         Icon(it, contentDescription = screen.title)
                     }
                 },
-                label = {screen.title?.let {Text(it)}}
+                label = { screen.title?.let { Text(it) } }
             )
         }
     }

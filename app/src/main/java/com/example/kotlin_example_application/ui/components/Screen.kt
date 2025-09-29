@@ -29,7 +29,7 @@ sealed class Screen(
         icon = Icons.Default.Person
     )
 
-    data object Product: Screen("product") {
+    data object Product : Screen("product") {
         const val ARG_PRODUCT_ID = "productId"
         fun routeWithArgs(productId: String) = "$route/$productId"
     }
